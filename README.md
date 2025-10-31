@@ -9,3 +9,5 @@
 - En markdown para mostrar fórmulas matemáticas en una sola línea utilizamos el símbolo dolar(\$): `$A \in B$` = $A \in B$ 
 - Para observar el estado en una rama: `git status`
 - Para observar la bitácora de commits: `git log` y luego salimos de la lista con: `ctrl + z`
+
+### Santiago trejo 2025
