@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__) #App sera nuestro aplicativo flask
-with open("clases_4geeks/models/iris_model.pkl", "rb") as file:
+with open("iris_model.pkl", "rb") as file:
     artifact = pickle.load(file) #Cargamos en tiempo real nuesto modelo creado
 
 @app.route("/",methods=["GET","POST"]) #Creamos nuestra apy para get y post

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Concreto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Resistencia del Concreto</h1>
+        <p>Ingresa los componentes de la mezcla para obtener la predicción.</p>
+        
+        <form action="/predict" method="post" class="form-grid">
+            <div class="input-group">
+                <label>Cemento (kg/m³)</label>
+                <input type="number" step="any" name="cement" required>
+            </div>
+            <div class="input-group">
+                <label>Escoria (Slag)</label>
+                <input type="number" step="any" name="slag" required>
+            </div>
+            <div class="input-group">
+                <label>Ceniza (Fly Ash)</label>
+                <input type="number" step="any" name="fly_ash" required>
+            </div>
+            <div class="input-group">
+                <label>Agua (kg/m³)</label>
+                <input type="number" step="any" name="water" required>
+            </div>
+            <div class="input-group">
+                <label>Superplastificante</label>
+                <input type="number" step="any" name="superplasticizer" required>
+            </div>
+            <div class="input-group">
+                <label>Agregado Grueso</label>
+                <input type="number" step="any" name="coarse_agg" required>
+            </div>
+            <div class="input-group">
+                <label>Agregado Fino</label>
+                <input type="number" step="any" name="fine_agg" required>
+            </div>
+            <div class="input-group">
+                <label>Edad (Días)</label>
+                <input type="number" step="any" name="age" required>
+            </div>
+            
+            <button type="submit">Calcular MPa</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
