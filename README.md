@@ -10,4 +10,4 @@
 - Para observar el estado en una rama: `git status`
 - Para observar la bitácora de commits: `git log` y luego salimos de la lista con: `ctrl + z`
 
-### Santiago trejo 2025
+### Santiago Trejo 2025
